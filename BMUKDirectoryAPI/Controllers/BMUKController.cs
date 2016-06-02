@@ -5,6 +5,7 @@ using BMUKDirectoryAPI.Models;
 
 namespace BMUKDirectoryAPI.Controllers
 {
+    [AllowCrossSiteJson]
     [RoutePrefix("api/BMUK")]
     public class BMUKController : ApiController
     {
