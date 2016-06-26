@@ -16,5 +16,11 @@ namespace BMUKDirectoryAPI.Controllers
         {
             return context.DirectoryData.Where(m => m.ParentId == -1).AsEnumerable();
         }
+
+        [Route("GetMember/{memberId}")]
+        public DirectoryData GetMember(int memberId)
+        {
+            return context.DirectoryData.SingleOrDefault(m => m.Id == memberId);
+        }
     }
 }
